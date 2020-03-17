@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="quick-padding">
+    <div class="row">
+        <div class="col-12">
+            <div class="imdb-logo">
+              <h2>IMDb</h2>
+            </div>
+            <div class="right-align white-font">
+              <h6 class="pointer" (click)="logout()">Logout</h6>
+            </div>
+        </div>
+      </div>
+  </div>
+  <h3 class="white-font">{{ errorMsg }}</h3>
+  <div class="movies-block white-font quick-padding">
+    <div class="movie-block margin-bottom" *ngFor="let movie of selectedMovie">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <div class="big-image-block">
+            <img class="poster shadowed" alt="{{movie.title}}" onError="this.src='https://cdn.guidingtech.com/imager/media/assets/210672/Best-Avengers-Endgame-Avengers-4-Wallpapers-for-Desktop-and-Mobile-2_4d470f76dc99e18ad75087b1b8410ea9.jpg?1544433662';" title="{{ movie.title }}" src="{{ movie.poster }}">
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          <h5 (click)="onMovieClick(movie._id)">{{ movie.title }} ({{ movie.released | slice:0:4 }})</h5>
+          <small>{{ movie.runtime }} Minutes (Runtime) - <span *ngFor="let genre of movie.genres; last as isLast">{{ genre }}<span *ngIf="isLast === false ? true : false">, </span></span></small>
+          <p>Rating: {{ movie.imdb.rating }}</p>
+          <p><span class="yellow-box">{{ movie.metacritic }}</span> Metascore</p>
+          <p>{{ movie.fullplot }}</p>
+          <p><span class="yellow-font">Awards: </span>{{ movie.awards }}</p>
+          <p><span class="yellow-font">Directors: </span><span *ngFor="let director of movie.directors; last as isLast">{{ director }}<span *ngIf="isLast === false ? true : false">, </span></span></p>
+          <p><span class="yellow-font">Writers: </span><span *ngFor="let writer of movie.writers; last as isLast">{{ writer }}<span *ngIf="isLast === false ? true : false">, </span></span></p>
+          <p><span class="yellow-font">Cast: </span><span *ngFor="let actor of movie.cast; last as isLast">{{ actor }}<span *ngIf="isLast === false ? true : false">, </span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

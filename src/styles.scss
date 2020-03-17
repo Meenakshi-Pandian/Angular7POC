@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html, body {
+    height: 100%;
+    background-color: #191919;
+    font-family: 'PT Sans Narrow';
+}
+.white-font {
+    color: #fff;
+}
+.imdb-logo {
+    background-color: #E8B708;
+    color: #191919;
+    font-weight: 700;
+    width: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+.quick-padding {
+    padding: 20px 0;
+}
+.quick-margin {
+    margin: 20px 0;
+}
+.red-border {
+    border-color: red;
+}
+.full-width {
+    width: 100%;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+.poster-block {
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    margin-left: auto;
+}
+.big-image-block {
+    width: 100%;
+    height: 375px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right-align {
+    text-align: right;
+}
+.center-align {
+    text-align: center;
+}
+.yellow-box {
+    background-color: #e8b708;
+    padding: 0px 3px;
+    color: #fff;
+}
+.italic {
+    font-style: italic;
+}
+.yellow-font {
+    color: #E8B708;
+}
+.pointer {
+    cursor: pointer;
+}
+.pg-block {
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 2px 3px;
+    margin-right: 3px;
+}
+.underline {
+    text-decoration: underline;
+}

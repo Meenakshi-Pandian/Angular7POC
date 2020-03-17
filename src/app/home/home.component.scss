@@ -1,0 +1,13 @@
+p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+select, select:focus {
+    background: #e8b708;
+    border-color: transparent;
+    border-radius: 0;
+    color: #fff;
+}
+select:focus > option:hover { 
+    background: #000 !important;
+}
